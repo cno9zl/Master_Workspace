@@ -1,10 +1,3 @@
-locals {
-  OrgName = "CNO_Financial"
-  AppName = "Test_Application"
-  AgtPoolId = "apool-Fc37tzKDHSZAXs5w"
-  RepoId = "cno9zl/Test_Application_UAT_IAC"
-  GithubToken = var.cno9zl_github_token
-}
 terraform {
 
   cloud {
