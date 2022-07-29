@@ -12,7 +12,7 @@ data "tfe_organization" "CNO_Financial" {
 }
 
 data "tfe_agent_pool" "Test_Application_UAT_AgentPool" {
-  name         = "Pool01"
+  name         = "pool00"
   organization = data.tfe_organization.CNO_Financial.name
 
 }
