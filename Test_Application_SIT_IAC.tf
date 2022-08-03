@@ -24,7 +24,7 @@ resource "tfe_workspace" "Test_Application_SIT" {
   agent_pool_id  = data.tfe_agent_pool.Test_Application_SIT_AgentPool.id
   execution_mode = "agent"
   vcs_repo {
-  identifier = "cno9zl/Test_Application_SIT_IAC"
+  identifier = "cno9zl/Test_Application_IAC"
   oauth_token_id = resource.tfe_oauth_client.Test_Application_SIT_Oauth.oauth_token_id
   branch = "SIT"
   }
