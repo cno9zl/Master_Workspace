@@ -26,7 +26,7 @@ resource "tfe_workspace" "Test_Application_SIT" {
   vcs_repo {
   identifier = "cno9zl/Test_Application_SIT_IAC"
   oauth_token_id = resource.tfe_oauth_client.Test_Application_SIT_Oauth.oauth_token_id
-  branch = SIT
+  branch = "SIT"
   }
 
    lifecycle {
