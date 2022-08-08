@@ -38,7 +38,7 @@ resource "tfe_workspace" "Test_Application_SIT" {
 }
 data "tfe_variable_set" "Cred_Variable_Set" {
   name         = "AZ_Cred_Prod"
-  organization = "data.tfe_organization.CNO_Financial.name"
+  organization = data.tfe_organization.CNO_Financial.name
 }
   resource "tfe_workspace_variable_set" "Cred_Variable_Set" {
   variable_set_id = data.tfe_variable_set.Cred_Variable_Set.id
