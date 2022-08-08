@@ -46,7 +46,7 @@ data "tfe_variable_set" "Test_Application_SIT_Cred_Variable_Set" {
 }
 resource "tfe_variable" "Test_Application_SIT_subscription_id" {
   key          = "subscription_id"
-  value        = "398b0d47-9ca7-47f8-8464-c2207e0a9c7a"
+  value        = "b5598f65-c814-421a-af61-bf4e51ad03e0"
   category     = "terraform"
   workspace_id = resource.tfe_workspace.Test_Application_SIT.id
   description  = "Azure Subscription ID"
