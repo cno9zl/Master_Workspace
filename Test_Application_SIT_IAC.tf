@@ -36,15 +36,15 @@ resource "tfe_workspace" "Test_Application_SIT" {
     resource.tfe_oauth_client.Test_Application_SIT_Oauth
   ]
 }
-data "tfe_variable_set" "Cred_Variable_Set" {
+data "tfe_variable_set" "Test_Application_SIT_Cred_Variable_Set" {
   name         = "AZ_Cred_Prod"
   organization = data.tfe_organization.CNO_Financial.name
 }
-  resource "tfe_workspace_variable_set" "Cred_Variable_Set" {
+  resource "tfe_workspace_variable_set" "Test_Application_SIT_Cred_Variable_Set" {
   variable_set_id = data.tfe_variable_set.Cred_Variable_Set.id
   workspace_id    = resource.tfe_workspace.Test_Application_SIT.id
 }
-resource "tfe_variable" "subscription_id" {
+resource "tfe_variable" "Test_Application_SIT_subscription_id" {
   key          = "subscription_id"
   value        = "398b0d47-9ca7-47f8-8464-c2207e0a9c7a"
   category     = "terraform"
