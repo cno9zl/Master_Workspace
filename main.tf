@@ -13,3 +13,7 @@ terraform {
       }
     }
   }
+data "tfe_organization" "CNO_Financial" {
+  name  = "CNO_Financial"
+
+}

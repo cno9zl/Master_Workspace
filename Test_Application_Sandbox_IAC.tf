@@ -1,7 +1,4 @@
-data "tfe_organization" "CNO_Financial" {
-  name  = "CNO_Financial"
 
-}
 
 data "tfe_agent_pool" "Test_Application_Sandbox_AgentPool" {
   name         = "Pool01"
