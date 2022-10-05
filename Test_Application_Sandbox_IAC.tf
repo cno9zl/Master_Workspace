@@ -41,6 +41,14 @@ data "tfe_variable_set" "Test_Application_Sandbox_Cred_Variable_Set" {
   variable_set_id = data.tfe_variable_set.Test_Application_Sandbox_Cred_Variable_Set.id
   workspace_id    = resource.tfe_workspace.Test_Application_Sandbox.id
 }
+data "tfe_variable_set" "Test_Application_Sandbox_Default_Variable_Set" {
+  name         = "Default_Credentials"
+  organization = data.tfe_organization.CNO_Financial.name
+}
+  resource "tfe_workspace_variable_set" "Test_Application_Sandbox_Default_Variable_Set" {
+  variable_set_id = data.tfe_variable_set.Test_Application_Sandbox_Default_Variable_Set.id
+  workspace_id    = resource.tfe_workspace.Test_Application_Sandbox.id
+}
 resource "tfe_variable" "Test_Application_Sandbox_subscription_id" {
   key          = "subscription_id"
   value        = "b5598f65-c814-421a-af61-bf4e51ad03e0"
